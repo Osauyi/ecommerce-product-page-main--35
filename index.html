@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href=".images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="menu-with-logo">
+          <img
+            src="images/icon-menu.svg"
+            alt="menu-icon"
+            class="Obar"
+            onclick="openNav()"
+          />
+          <img src="images/logo.svg" alt="logo" />
+        </div>
+
+        <div class="Menu">
+          <img
+            src="images/icon-close.svg"
+            class="Cbar"
+            onclick="closeNav()"
+            alt="close-icon"
+          />
+          <ul>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="DarkNavLeft"></div>
+        <div class="end">
+          <div class="dacart">
+            <img class="navCart" src="images/icon-cart.svg" alt="cart" />
+            <span class="notificat-badge">0</span>
+            <div class="cartBox">
+              <div class="cartHeader">
+                <p>Cart</p>
+              </div>
+            </div>
+          </div>
+
+          <img
+            class="avatar"
+            src="images/image-avatar.png"
+            alt="image-avatar"
+          />
+        </div>
+      </nav>
+
+      <section>
+        <div class="productimage">
+          <div class="lightbox-container">
+            <div class="mainsneakers" onclick="openModal()">
+              <div class="slideshow-container">
+                <div class="slides slideDaimage">
+                  <img src="images/image-product-1.jpg" alt="" />
+                </div>
+                <div class="slides slideDaimage">
+                  <img src=" images/image-product-2.jpg" alt="" />
+                </div>
+                <div class="slides slideDaimage">
+                  <img src="images/image-product-3.jpg" alt="" />
+                </div>
+                <div class="slides slideDaimage">
+                  <img src="images/image-product-4.jpg" alt="" />
+                </div>
+
+                <div class="prev" onclick="plusSlides(-1)">
+                  <img src="images/icon-previous.svg" alt="" />
+                </div>
+                <div class="next" onclick="plusSlides(1)">
+                  <img src="images/icon-next.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="lightbox-column littlethumbmail">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                alt="Sneakers2"
+                onclick="currentSlide(1)"
+                class="thumbmailOPa"
+              />
+            </div>
+            <div class="lightbox-column littlethumbmail">
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                alt="Sneakers3"
+                onclick="currentSlide(2)"
+                class="thumbmailOPa"
+              />
+            </div>
+            <div class="lightbox-column littlethumbmail">
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                alt="Sneakers4"
+                onclick="currentSlide(3)"
+                class="thumbmailOPa"
+              />
+            </div>
+            <div class="lightbox-column littlethumbmail">
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                alt="Sneakers5"
+                onclick="currentSlide(4)"
+                class="thumbmailOPa"
+              />
+            </div>
+          </div>
+          <div id="lightboxmodal">
+            <img
+              src="images/icon-close.svg"
+              class="Cmodar"
+              onclick="closeModal()"
+              alt="close-icon"
+            />
+            <div class="lightmodal-contents">
+              <div class="lightbox-container">
+                <div class="mainsneakers">
+                  <div class="slideshow-container">
+                    <div class="lightslides slideDaimage">
+                      <img src="images/image-product-1.jpg" alt="" />
+                    </div>
+                    <div class="lightslides slideDaimage">
+                      <img src=" images/image-product-2.jpg" alt="" />
+                    </div>
+                    <div class="lightslides slideDaimage">
+                      <img src="images/image-product-3.jpg" alt="" />
+                    </div>
+                    <div class="lightslides slideDaimage">
+                      <img src="images/image-product-4.jpg" alt="" />
+                    </div>
+
+                    <div class="prevmodal" onclick="plusSlided(-1)">
+                      <img src="images/icon-previous.svg" alt="" />
+                    </div>
+                    <div class="nextmodal" onclick="plusSlided(1)">
+                      <img src="images/icon-next.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="lightbox-column lightlittlethumbmail">
+                  <img
+                    src="images/image-product-1-thumbnail.jpg"
+                    alt="Sneakers2"
+                    onclick="currentSlided(1)"
+                    class="lightthumbmailOPa"
+                  />
+                </div>
+                <div class="lightbox-column lightlittlethumbmail">
+                  <img
+                    src="images/image-product-2-thumbnail.jpg"
+                    alt="Sneakers3"
+                    onclick="currentSlided(2)"
+                    class="lightthumbmailOPa"
+                  />
+                </div>
+                <div class="lightbox-column lightlittlethumbmail">
+                  <img
+                    src="images/image-product-3-thumbnail.jpg"
+                    alt="Sneakers4"
+                    onclick="currentSlided(3)"
+                    class="lightthumbmailOPa"
+                  />
+                </div>
+                <div class="lightbox-column lightlittlethumbmail">
+                  <img
+                    src="images/image-product-4-thumbnail.jpg"
+                    alt="Sneakers5"
+                    onclick="currentSlided(4)"
+                    class="lightthumbmailOPa"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productdetails">
+          <h1>Sneaker Company</h1>
+          <h2>Fall Limited Edition Sneakers</h2>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price">
+            <h3>$125.00 <span>50%</span></h3>
+            <p class="Bprice">$250.00</p>
+          </div>
+          <div class="dabuttons">
+            <div class="added">
+              <div class="minus">
+                <img src="images/icon-minus.svg" alt="minus-icon" />
+              </div>
+              <h4>0</h4>
+              <div class="plus">
+                <img src="images/icon-plus.svg" alt="plus-icon" />
+              </div>
+            </div>
+            <button class="addtocart">
+              <img src="images/icon-cart.svg" alt="cart" /> Add to cart
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Osauyi</a>.
+      </div>
+    </footer>
+  </body>
+  <script src="index.js"></script>
+</html>
