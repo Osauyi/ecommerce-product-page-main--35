@@ -83,7 +83,6 @@ function showSlidern(n) {
 } 
 
 
-
 function openNav() {
   document.querySelector(".Menu").style.width = "68%";
   DarkNavLeft.style.width = '32%'
