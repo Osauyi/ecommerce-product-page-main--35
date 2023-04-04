@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here]
-- Live Site URL: [Add live site URL here]
+- Solution URL: [https://github.com/Osauyi/ecommerce-product-page-main--35.git]
+- Live Site URL: [https://osauyi.github.io/ecommerce-product-page-main--35/]
 
 ### Built with
 
